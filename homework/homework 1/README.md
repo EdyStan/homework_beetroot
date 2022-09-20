@@ -11,7 +11,7 @@ Create a python program named “task2”, and use the built-in function `print`
 Also, provide a comment text above each print statement, mentioned above, with the expected output after execution of the particular print statement.
 
 (Ex.
-# 'hello world'
+'hello world'
 print('hello world')
 )
 
@@ -22,17 +22,23 @@ Task 3
 Write a program, which has two print statements to print the following text (capital letters "O" and "H", made from "#" symbols):
 
 #########
-#       #
-#       #
-#       #
+
+#..............#
+
+#..............#
+
 #########
 
 
-#       #
-#       #
+#..............#
+
+#..............#
+
 ######### 
-#       # 
-#       #
+
+#..............#
+
+#..............#
 
  
 
