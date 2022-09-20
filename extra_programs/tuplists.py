@@ -1,3 +1,7 @@
+"""
+Some task
+"""
+
 my_list = [1, 2, 44, 2, 4]
 my_tuple = 4, 6, 7, 2, 0
 
