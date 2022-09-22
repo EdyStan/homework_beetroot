@@ -12,7 +12,7 @@ shuffle(shuffled_list)
 time_start_4 = time()
 final = big_list[1::2]
 print("First method ordered: ", time() - time_start_4)
-
+#OR
 time_start_1 = time()
 final_shuffled_list = shuffled_list[1::2]
 print("First method: ", time() - time_start_1)
