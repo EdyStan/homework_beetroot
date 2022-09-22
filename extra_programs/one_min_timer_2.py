@@ -3,5 +3,9 @@
 import time
 
 print("This is the start of the program.")
-time.sleep(60)
-print("This prints 60 seconds later.")
+time.sleep(5)
+print("This prints 5 seconds later.")
+
+while True:
+    time.sleep(5)
+    print('5 seconds have passed.')
