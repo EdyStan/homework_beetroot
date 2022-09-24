@@ -25,7 +25,7 @@ def counter(*args):
             count = 1
         current_elem = element
 
-    print(biggest_count, cons_element)
+    print(f"Number of occurrences: {biggest_count}. Tne number that occurred the most: {cons_element}")
 
 
-counter(1,2,3,33,3,3,3,4,4,4,4,4,4,4)
+counter(1, 3, 3, 3, 5, 5, 5, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4)
