@@ -28,4 +28,4 @@ def counter(*args):
     print(f"Number of occurrences: {biggest_count}. Tne number that occurred the most: {cons_element}")
 
 
-counter(1, 3, 3, 3, 5, 5, 5, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4)
+counter(1, 3, 3, 3, 5, 5, 5, 3, 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 3, 4, 4, 4, 4, 4, 4, 4)
