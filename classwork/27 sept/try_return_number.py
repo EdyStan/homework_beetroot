@@ -31,9 +31,10 @@ def the_high_level_function_big_lols(a_list):
         except OddError:
             print('It\'s an \"odd\" error lolll!!')
         except ZeroError:
-            print('Zero exception - no lols.')
+            print('Zero exception - no lolz.')
         else:
             print(f'The number is: {element}')
 
 
 the_high_level_function_big_lols(my_list)
+
