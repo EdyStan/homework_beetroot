@@ -33,6 +33,8 @@ class TVController:
     def current_channel(self):
         print(self.N, CHANNELS[self.N - 1], sep=': ')
 
+# Is there a way to not write the line with print these many times? For the aspect and maybe future efficiency of code.
+
     def is_exist(self, M):
         try:
             if M in CHANNELS or M <= len(CHANNELS):
