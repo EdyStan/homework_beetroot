@@ -2,9 +2,9 @@
 # statement, before recursion call, like index < 10, to no get recursion exception.
 
 def recursive_fct(my_int):
-    my_int += 1
-    print(my_int)
     if my_int < 10:
+        my_int += 1
+        print(my_int)
         recursive_fct(my_int)
 
 
