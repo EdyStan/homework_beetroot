@@ -7,6 +7,12 @@ class Product:
         self.amount = 0
         self.sold_amount = 0
 
+# There, I could use only a list or, better, a set, for storing the products in ProductStore because
+# I already stored the amount of the product inside the Product class.
+# Also, it would have been better to store the amount, the sold amount and the discount
+# in a list of dictionaries or something like that, so the same product could have different arguments in
+# different stores.
+
 
 class ProductStore:
     def __init__(self):
@@ -55,29 +61,3 @@ class ProductStore:
         for key in self.dict_of_products:
             if product_name == key.name:
                 return key.name, key.amount
-
-
-x = Product()
-y = Product('fruit', 'Apple', 1.5)
-z = Product('electronic', 'blender', 99.99)
-store = ProductStore()
-
-store.add(x, 100)
-store.add(y, 605)
-store.add(z, 4)
-
-store.set_discount('cucumber', 40)
-print(x.discount)
-
-store.set_discount('blender', 15)
-
-print(x.amount)
-store.sell_product('cucumber', 50)
-print(x.amount)
-
-store.sell_product('blender', 2)
-
-store.get_income()
-store.get_all_products()
-
-print(store.get_product_info('cucumber'))
