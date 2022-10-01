@@ -6,7 +6,7 @@ def make_operation(operation, *args):
         return the_sum
     elif operation == "-":
         low = args[0]
-        for i in args[1:-1]:
+        for i in args[1:]:
             low -= i
         return low
     elif operation == "*":
