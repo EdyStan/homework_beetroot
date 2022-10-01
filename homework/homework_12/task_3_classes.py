@@ -35,13 +35,3 @@ class FractionClass:
         common_denominator = self.denominator * other.numerator
         divisor = gcd(common_denominator, common_numerator)
         return str(int(common_numerator / divisor)) + '/' + str(int(common_denominator / divisor))
-
-
-a = input('First fraction: ')
-b = input('second fraction: ')
-x = FractionClass(a)
-y = FractionClass(b)
-print(f'Addition: {x + y}')
-print(f'Subtraction: {x - y}')
-print(f'Multiplication: {x * y}')
-print(f'Division: {x / y}')
