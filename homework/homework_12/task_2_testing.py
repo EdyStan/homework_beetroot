@@ -49,4 +49,3 @@ l1.group_by_year(1601)
 l1.group_by_author(a1)
 
 l1.group_by_author(a2)
-

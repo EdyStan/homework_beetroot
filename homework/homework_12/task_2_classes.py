@@ -24,7 +24,7 @@ class Book:
         self.name = name
         self.year = year
         self.author = author
-        self.count_books += 1
+        Book.count_books += 1
 
     def __repr__(self):
         return f'{self.name} ({self.year}) by {self.author}'
