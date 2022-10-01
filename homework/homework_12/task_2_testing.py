@@ -1,12 +1,12 @@
-import task_2_classes as t2
+from task_2_classes import Author, Book, Library
 
 # initializing the classes
-a1 = t2.Author('Shakespeare', 'England', 'April 1564')
-a2 = t2.Author('Agatha Christie', 'United Kingdom', 'Sep 1890')
-b1 = t2.Book('Hamlet', 1601, a1)
-b2 = t2.Book('Romeo and Juliet', 1595, a1)
-b3 = t2.Book('Death on the Nile', 1937, a2)
-b4 = t2.Book('Five little pigs', 1942, a2)
+a1 = Author('Shakespeare', 'England', 'April 1564')
+a2 = Author('Agatha Christie', 'United Kingdom', 'Sep 1890')
+b1 = Book('Hamlet', 1601, a1)
+b2 = Book('Romeo and Juliet', 1595, a1)
+b3 = Book('Death on the Nile', 1937, a2)
+b4 = Book('Five little pigs', 1942, a2)
 
 # adding books to the author's bibliography
 a1.new_book(b1)
@@ -37,7 +37,7 @@ print(a1.birthday)
 print(a1.country)
 
 # initializing and adding to library
-l1 = t2.Library('Vatican Library')
+l1 = Library('Vatican Library')
 l1.new_book('Hamlet', 1601, a1)
 l1.new_book('Death on the Nile', 1937, a2)
 

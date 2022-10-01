@@ -1,9 +1,9 @@
 def choose_func(nums: list, func1, func2):
-    contor = True
+    lol = True
     for numb in nums:
         if numb < 0:
-            contor = False
-    if contor:
+            lol = False
+    if lol:
         return func1(nums)
     else:
         return func2(nums)

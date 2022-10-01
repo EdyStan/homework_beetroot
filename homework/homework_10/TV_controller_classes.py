@@ -43,19 +43,3 @@ class TVController:
                 print('No')
         except TypeError:
             print('No')
-
-
-TV = TVController()
-print(TV.N)
-print('\nFirst:')
-TV.first_channel()
-print('\nLast:')
-TV.last_channel()
-print('\nNext:')
-TV.next_channel()
-print('\nPrevious:')
-TV.previous_channel()
-print('\nCurrent:')
-TV.current_channel()
-print('\nis exist:')
-TV.is_exist('BC')

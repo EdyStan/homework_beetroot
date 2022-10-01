@@ -1,9 +1,9 @@
-import task_3_classes as t3
+from task_3_classes import Product, ProductStore
 
-x = t3.Product()
-y = t3.Product('fruit', 'Apple', 1.5)
-z = t3.Product('electronic', 'blender', 99.99)
-store = t3.ProductStore()
+x = Product()
+y = Product('fruit', 'Apple', 1.5)
+z = Product('electronic', 'blender', 99.99)
+store = ProductStore()
 
 store.add(x, 100)
 store.add(y, 605)
