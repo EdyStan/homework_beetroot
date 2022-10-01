@@ -1,45 +1,44 @@
+class Author:
+
+    def __init__(self, name, country, birthday):
+        self.books = []
+        self.name = name
+        self.country = country
+        self.birthday = birthday
+
+    def new_book(self, book):
+        self.books.append(book)
+
+    def __repr__(self):
+        return f'{self.name}'
+
+    def __str__(self):
+        return f'{self.name}'
+
+
 class Book:
+
+    count_books = 0
 
     def __init__(self, name, year, author):
         self.name = name
         self.year = year
         self.author = author
+        self.count_books += 1
 
     def __repr__(self):
         return f'{self.name} ({self.year}) by {self.author}'
 
     def __str__(self):
         return f'{self.name} ({self.year}) by {self.author}'
-
-
-class Author:
-
-    def __init__(self, name, country, birthday, *books):
-        self.books = []
-        for book in books:
-            self.books.append(book)
-        self.name = name
-        self.country = country
-        self.birthday = birthday
-        self.books = books
-
-    def __repr__(self):
-        return f'{self.name}'
-
-    def __str__(self):
-        return f'{self.name}'
 
 
 class Library:
 
-    def __init__(self, name, books=None, authors=None):
-        if books is None:
-            books = []
-        if authors is None:
-            authors = set()
+    def __init__(self, name):
         self.name = name
-        self.books = books
-        self.authors = authors
+        self.books = []
+        self.authors = []
 
     def __repr__(self):
         return f'{self.name} Library'
@@ -50,13 +49,14 @@ class Library:
     def new_book(self, name: str, year: int, author: Author):
         for book in author.books:
             if book.name == name and book.year == year:
+                book.count_books += 1
                 self.books.append(book)
-                self.authors.add(author)
+                self.authors.append(author)
 
     def group_by_author(self, author: Author):
         print(f'Books writen by {author}:')
-        for book in self.books:
-            if book.author.name == author.name:
+        for book in author.books:
+            if book in self.books:
                 print(book)
 
     def group_by_year(self, year: int):
