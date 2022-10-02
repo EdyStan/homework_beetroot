@@ -6,16 +6,18 @@
 
 import random
 from time import time, sleep
+# from os import system
 
 n = int(input("Please select an integer: "))
 
-table = [[' ' for i in range(2*n+1)] for j in range(2*n+1)]
+table = [['  ' for i in range(2*n+1)] for j in range(2*n+1)]
 
 particle = table[n][n]              # initial coordinates, in the center
 particle_x, particle_y = n, n
 
 start_time = time()
 while particle_x not in [0, 2*n] and particle_y not in [0, 2*n]:
+    # system('clear')
     table[particle_x][particle_y] = '💫'     # helps us to track the particle :)
     # move_direction = random.choice([particle_x-1, particle_x+1, particle_y-1, particle_y+1])
     move_direction = random.choice(['x', 'y'])
