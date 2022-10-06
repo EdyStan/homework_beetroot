@@ -49,18 +49,23 @@ class Library:
     def new_book(self, name: str, year: int, author: Author):
         for book in author.books:
             if book.name == name and book.year == year:
-                book.count_books += 1
                 self.books.append(book)
                 self.authors.append(author)
 
     def group_by_author(self, author: Author):
         print(f'Books writen by {author}:')
+        a = []
         for book in author.books:
             if book in self.books:
+                a.append(book)
                 print(book)
+        return a
 
     def group_by_year(self, year: int):
         print(f'Books writen in {year}:')
+        a = []
         for book in self.books:
             if book.year == year:
+                a.append(book)
                 print(book)
+        return a
