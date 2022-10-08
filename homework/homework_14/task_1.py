@@ -1,7 +1,7 @@
 def logger(func):
     def wrapper(*args):
-        print(func.__code__.co_name + ' called with ' + f'{args}')
-        return add
+        print(f'{func.__code__.co_name} called with {args}')
+        return func(*args)
     return wrapper
 
 
