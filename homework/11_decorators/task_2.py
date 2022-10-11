@@ -1,15 +1,15 @@
 def stop_words(words: list):
-    def inside_func_1(func):
-        def inside_func_2(name):
+    def decorator_function(func):
+        def wrapper(name):
             sequence = func(name)
             for word in words:
                 if word in sequence:
                     sequence = sequence.replace(word, '*')
             return sequence
 
-        return inside_func_2
+        return wrapper
 
-    return inside_func_1
+    return decorator_function
 
 
 @stop_words(['pepsi', 'BMW'])
