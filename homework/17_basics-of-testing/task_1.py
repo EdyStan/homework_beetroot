@@ -45,4 +45,5 @@ class AuthorBookLibTestCase(unittest.TestCase):
 
 
 # Big problem: It returns OK everytime, doesn't matter what wrong or good parameters I introduce
-unittest.main()
+if __name__ == "__main__":
+    unittest.main()
