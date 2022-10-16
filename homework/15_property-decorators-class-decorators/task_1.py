@@ -1,10 +1,15 @@
+import re
+
+
 class EmailStorage:
 
     @staticmethod
     def validate(func):
-        def wrap(name):
-            if name != r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b':
-                return func(name)
+        def wrap(e_name):
+            if re.fullmatch(r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b', e_name):
+                return func(e_name)
+            else:
+                raise SyntaxError('Your email is not good')
 
         return wrap
 
@@ -13,5 +18,4 @@ class EmailStorage:
         self.e_name = e_name
 
 
-rabla = EmailStorage('lalal')
-print(rabla.e_name)
+rabla = EmailStorage('aedysss.777@gmail.com')
