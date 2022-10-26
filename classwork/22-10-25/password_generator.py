@@ -49,7 +49,7 @@ def password_generator():
             if repeat == 'y':
                 break
         except IndexError:
-            print('You have no characters to make a password. Try again accepting at least one set of characters!')
+            print('You have no characters to make a password. Try again accepting at least one set of characters!\n')
 
 
 password_generator()
