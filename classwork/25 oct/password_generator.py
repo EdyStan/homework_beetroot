@@ -1,7 +1,7 @@
 # Password Generator
-# #     1.    Password length should be from 4 to 16 symbols
-# #     2.    The following options should be available for the user:
-# # -  latin alphabet, upper case letters, lower case letters, punctuation symbols
+#     1.    Password length should be from 4 to 16 symbols
+#     2.    The following options should be available for the user:
+# -  latin alphabet, upper case letters, lower case letters, punctuation symbols
 # the response can be Y/N (possible usage y/n and Y/N)
 #        3. Based on the given bass the password is generated randomly and given to the user
 
@@ -19,45 +19,29 @@ def password_generator():
             length = 0
 
     password_alphabet = ''
-    while True:
-        use_lowercase = input('Do you want to use lowercase letters?(y/n): ')
-        if use_lowercase == 'y':
-            password_alphabet += ascii_lowercase
-            break
-        elif use_lowercase == 'n':
-            break
-        else:
-            print('Please type y or n! :(')
+    sad_face = ':('
 
-    while True:
-        use_lowercase = input('Do you want to use uppercase letters?(y/n): ')
-        if use_lowercase == 'y':
-            password_alphabet += ascii_uppercase
-            break
-        elif use_lowercase == 'n':
-            break
-        else:
-            print('Please type y or n! :((')
+    def use_characters(characters, instance_words):
+        while True:
+            # The following command does not work if the input string is
+            # f'Do you want to use {instance_words}?(y/n): '
+            use_lowercase = input('Do you want to use ' + instance_words + '?(y/n): ')
+            if use_lowercase == 'y':
+                nonlocal password_alphabet
+                password_alphabet += characters
+                break
+            elif use_lowercase == 'n':
+                break
+            else:
+                nonlocal sad_face
+                print('Please type y or n! ' + sad_face)
+                sad_face += '('
 
-    while True:
-        use_lowercase = input('Do you want to use digits?(y/n): ')
-        if use_lowercase == 'y':
-            password_alphabet += digits
-            break
-        elif use_lowercase == 'n':
-            break
-        else:
-            print('Please type y or n! :(((')
+    character_groups_list = [ascii_uppercase, ascii_lowercase, digits, punctuation]
+    instance_words_list = ['uppercase letters', 'lowercase letters', 'digits', 'symbols']
 
-    while True:
-        use_lowercase = input('Do you want to use symbols?(y/n): ')
-        if use_lowercase == 'y':
-            password_alphabet += punctuation
-            break
-        elif use_lowercase == 'n':
-            break
-        else:
-            print('Please type y or n! :(((((')
+    for character_group, varname in zip(character_groups_list, instance_words_list):
+        use_characters(character_group, varname)
 
     password = ''.join(choices(password_alphabet, k=length))
     print(password)
