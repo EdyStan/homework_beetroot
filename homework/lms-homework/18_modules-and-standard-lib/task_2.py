@@ -4,11 +4,11 @@ import sys
 print(sys.path)
 
 # Append new path to the existing one
-sys.path.append('/home/edystan/Desktop/folderul_D/courses/beetroot_academy/homework/18_modules-and-standard-lib/task_1')
+sys.path.append('/homework/lms-homework/18_modules-and-standard-lib/task_1')
 print(sys.path)
 
 # Define the entire path
-sys.path = '/home/edystan/Desktop/folderul_D/courses/beetroot_academy/homework/18_modules-and-standard-lib/task_1'
+sys.path = '/homework/lms-homework/18_modules-and-standard-lib/task_1'
 print(sys.path)
 
 try:
