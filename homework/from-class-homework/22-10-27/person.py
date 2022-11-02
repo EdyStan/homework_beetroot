@@ -76,3 +76,9 @@ class Patient(Person):
             print('The patient is healthy.')
         else:
             print('The patient needs to be treated.')
+
+
+p1 = Person('George', 22)
+p1.gender = 'male'
+
+print(p1.gender)
