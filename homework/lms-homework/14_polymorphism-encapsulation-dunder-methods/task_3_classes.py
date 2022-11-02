@@ -4,9 +4,9 @@ from re import findall
 
 class FractionClass:
     def __init__(self, fraction_string):
-        t = [int(s) for s in findall(r'\b\d+\b', fraction_string)]
-        self.numerator = t[0]
-        self.denominator = t[1]
+        t = fraction_string.split('/')
+        self.numerator = int(t[0])
+        self.denominator = int(t[1])
         if self.denominator == 0:
             raise ZeroDivisionError('Denominator can\'t take the value of 0')
         self.float_fraction = self.numerator / self.denominator
