@@ -9,6 +9,28 @@ class FractionClass:
         self.denominator = t[1]
         if self.denominator == 0:
             raise ZeroDivisionError('Denominator can\'t take the value of 0')
+        self.float_fraction = self.numerator / self.denominator
+
+    def __lt__(self, other):
+        return self.float_fraction < other.float_fraction
+
+    def __le__(self, other):
+        return self.float_fraction <= other.float_fraction
+
+    def __gt__(self, other):
+        return self.float_fraction > other.float_fraction
+
+    def __ge__(self, other):
+        return self.float_fraction >= other.float_fraction
+
+    def __eq__(self, other):
+        return self.float_fraction == other.float_fraction
+
+    def __ne__(self, other):
+        return self.float_fraction != other.float_fraction
+
+    def __repr__(self):
+        return str(self.numerator) + '/' + str(self.denominator)
 
     def __add__(self, other):
         common_denominator = lcm(self.denominator, other.denominator)
