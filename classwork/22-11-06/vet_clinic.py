@@ -10,6 +10,7 @@ class Animal:
         self.kind = kind
         self.name = name
         self.age = age
+        self.vaccinated = False
         Animal.list_of_animals.append(self)
 
     @staticmethod
@@ -40,7 +41,6 @@ class Animal:
         size = input('Size of your cat: ')
         cat = cls('cat', name, age)
         cat.size = size
-        cat.vaccinated = False
         return cat
 
     @classmethod
@@ -50,7 +50,6 @@ class Animal:
         size = input('Size of your dog: ')
         dog = cls('dog', name, age)
         dog.size = size
-        dog.vaccinated = False
         return dog
 
     def get_vaccinated(self):
