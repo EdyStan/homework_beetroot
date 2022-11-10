@@ -12,3 +12,4 @@ my_list.sort()
 for index in reversed(my_list):
     values.pop(index)
     print(values)
+

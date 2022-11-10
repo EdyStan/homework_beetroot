@@ -10,7 +10,7 @@ class Animal:
         self.kind = kind
         self.name = name
         self.age = age
-        self.vaccinated = False
+        self.__vaccinated = False
         Animal.list_of_animals.append(self)
 
     @staticmethod
@@ -55,7 +55,7 @@ class Animal:
     def get_vaccinated(self):
         if self.kind in ['dog', 'cat']:
             self.vaccination_date = datetime.now()
-            self.vaccinated = True
+            self.__vaccinated = True
         else:
             print("We will not vaccinate your animal!")
 
@@ -64,7 +64,7 @@ class Animal:
             if self.vaccination_date > datetime.now() - timedelta(days=365.25):
                 print(f'Your {self.kind} is vaccinated')
             print(f'Your {self.kind} is not vaccinated!')
-            self.vaccinated = False
+            self.__vaccinated = False
         except AttributeError:
             if self.kind in ['dog', 'cat']:
                 print('Animal was never vaccinated. \nYou need to vaccinate it.')
