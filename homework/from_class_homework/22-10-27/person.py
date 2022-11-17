@@ -18,8 +18,8 @@ class Person:
 
 
 class BusDriver(Person):
-    def __init__(self, name, age, years=5):
-        super().__init__(name, age)
+    def __init__(self, name, age, gender='undefined', years=5):
+        super().__init__(name, age, gender)
         self._years_of_driving = years
 
     @property
@@ -32,8 +32,8 @@ class BusDriver(Person):
 
 
 class Student(Person):
-    def __init__(self, name, age, credits_number=0, status='enrolled'):
-        super().__init__(name, age)
+    def __init__(self, name, age, gender='undefined', credits_number=0, status='enrolled'):
+        super().__init__(name, age, gender)
         self._credits = credits_number
         self._status = status
 
@@ -55,8 +55,8 @@ class Student(Person):
 
 
 class Patient(Person):
-    def __init__(self, name, age, diagnostic='undefined'):
-        super().__init__(name, age)
+    def __init__(self, name, age, gender='undefined', diagnostic='undefined'):
+        super().__init__(name, age, gender)
         self._diagnostic = diagnostic
 
     @property

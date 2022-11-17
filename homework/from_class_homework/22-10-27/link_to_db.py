@@ -1,15 +1,15 @@
 import sqlite3
-from person import BusDriver, Student, Patient
+from person import BusDriver, Student, Patient, Person
 
 conn = sqlite3.connect('persons.db')
 
 c = conn.cursor()
 
-c.execute("""CREATE TABLE persons (
-            name text,
-            age text,
-            gender integer
-            )""")
+# c.execute("""CREATE TABLE persons (
+#             name text,
+#             age text,
+#             gender integer
+#             )""")
 
 
 def insert_pers(pers):
