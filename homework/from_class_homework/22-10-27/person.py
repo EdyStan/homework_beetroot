@@ -1,8 +1,16 @@
 class Person:
     def __init__(self, name, age, gender='undefined'):
-        self.name = name
-        self.age = age
+        self._name = name
+        self.__age = age
         self._gender = gender
+
+    @property
+    def name(self):
+        return self._name
+
+    @property
+    def age(self):
+        return self.__age
 
     @property
     def gender(self):
@@ -15,6 +23,9 @@ class Person:
     @gender.deleter
     def gender(self):
         self._gender = 'undefined'
+
+    def __hash__(self):
+        return hash(self._name) ^ hash(self.__age)
 
 
 class BusDriver(Person):
@@ -79,6 +90,15 @@ class Patient(Person):
 
 
 p1 = Person('George', 22)
-p1.gender = 'male'
 
+print(hash(p1))
+p1.gender = 'male'
 print(p1.gender)
+print(hash(p1))  # Hash does not change when the gender is assigned to another value
+
+print(p1.name)
+p1._name = 'Andrew'
+print(p1.name)
+
+print(hash(p1))  # Hash changes with the change of the name
+

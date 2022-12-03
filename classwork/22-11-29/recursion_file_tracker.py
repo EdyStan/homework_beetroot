@@ -1,13 +1,14 @@
 import os
 
-mother_folder = r'your path'
+mother_folder = r'/home/edystan/Desktop/folderul_D/courses/beetroot_academy'
 
 
-def recursive_file_printer(the_path):
+def recursive_file_printer(the_path, the_tab=""):
     for folder_name in os.listdir(the_path):
-        print(folder_name)
+        print(the_tab + folder_name)
         if os.path.isdir(os.path.join(the_path, folder_name)):
-            recursive_file_printer(os.path.join(the_path, folder_name))
+            next_tab = the_tab + "   "
+            recursive_file_printer(os.path.join(the_path, folder_name), next_tab)
 
         # folder_path = the_path + folder_name
         #
