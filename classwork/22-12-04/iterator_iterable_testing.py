@@ -1,7 +1,7 @@
-from task_3_classes import ChristmasPresents
+from iterator_iterable import ChristmasPresents
 
 santa_sack = ChristmasPresents(['best mum mug', 'shirt'], ['best dad mug', 'world cup 2022 ball'],
-                               ['Harry Potter pen', 'earrings'], ['earrings', 'ivatherm water'])
+                               ['Harry Potter pen', 'earrings'], ['earrings'])
 
 # testing property
 print(santa_sack.mum_presents)

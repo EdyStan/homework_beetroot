@@ -12,7 +12,7 @@ list_2 = [element for index, element in enumerate(cities) if index % 2 == 0]
 assert list_1 == list_2
 
 for index, element in with_index(cities):
-    print(index, cities)
+    print(index, element)
 
 for index, element in enumerate(cities):
-    print(index, cities)
+    print(index, element)

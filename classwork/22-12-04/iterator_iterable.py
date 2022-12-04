@@ -1,9 +1,17 @@
 class ChristmasPresents:
-    def __init__(self, mum=[], dad=[], sis=[], best_friend=[]):
+    def __init__(self, mum=None, dad=None, sis=None, oana=None):
+        if oana is None:
+            oana = []
+        if sis is None:
+            sis = []
+        if dad is None:
+            dad = []
+        if mum is None:
+            mum = []
         self.mum = mum
         self.dad = dad
         self.sis = sis
-        self.oana = best_friend
+        self.oana = oana
 
 # -------------------------------------------------------------
 
