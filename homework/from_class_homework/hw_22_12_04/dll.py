@@ -14,13 +14,13 @@ class LinkedList:
     def __init__(self):
         self._head = None
         self._tail = None
-        self._index_count = 0
         self._number_of_elements = 0
-        self._iter_elem = None  # current element for iteration
+        # it looks like I don't have to initialize all the instance variables inside the __init__ method
+        # pretty interesting
 
     def __iter__(self):
         self._index_count = 0
-        self._iter_elem = None
+        self._iter_elem = None  # current element for iteration
         return self
 
     def __next__(self):
