@@ -20,6 +20,7 @@ class LinkedList:
 
     def __iter__(self):
         self._index_count = 0
+        self._iter_elem = None
         return self
 
     def __next__(self):
@@ -32,7 +33,6 @@ class LinkedList:
 
             return self._iter_elem
 
-        self._iter_elem = None
         raise StopIteration
 
     def add__tail_node(self, value):

@@ -10,3 +10,6 @@ for j in range(500):
 
 for elem in llist:
     print(elem)
+
+for elem in llist:
+    print(elem)
