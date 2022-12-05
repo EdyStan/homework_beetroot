@@ -7,7 +7,10 @@ santa_sack = ChristmasPresents(['best mum mug', 'shirt'], ['best dad mug', 'worl
 print(santa_sack.mum_presents)
 
 # testing setter
+print(santa_sack.sis_presents)
 santa_sack.sis_presents = 'cactus'
+print(santa_sack.sis_presents)
+
 santa_sack.oana_presents = 'roses'
 
 # testing deleter
@@ -16,5 +19,8 @@ del santa_sack.oana_presents
 print(santa_sack.oana_presents)
 
 # testing class iteration
+for present in santa_sack:
+    print(present)
+
 for present in santa_sack:
     print(present)

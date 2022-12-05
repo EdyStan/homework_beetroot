@@ -79,8 +79,10 @@ class ChristmasPresentsIter:
         self._oana = ChristmasPresents.oana
         self._presents_size = len(self._mum) + len(self._dad) + len(self._sis) + len(self._oana)
         self._current_index = 0
+        self.__cactus = 2
 
     def __iter__(self):
+        self._current_index = 0
         return self
 
     def __next__(self):
