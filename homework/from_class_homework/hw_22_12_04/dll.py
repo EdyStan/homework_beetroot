@@ -19,19 +19,14 @@ class LinkedList:
         # pretty interesting
 
     def __iter__(self):
-        self._index_count = 0
-        self._iter_elem = None  # current element for iteration
+        self._iter_elem = self._head  # current element for iteration
         return self
 
     def __next__(self):
-        while self._index_count < self._number_of_elements:
-            self._index_count += 1
-            if self._iter_elem is None:
-                self._iter_elem = self._head
-            else:
-                self._iter_elem = self._iter_elem.next
-
-            return self._iter_elem
+        while self._iter_elem is not None:
+            current_iter_elem = self._iter_elem
+            self._iter_elem = self._iter_elem.next
+            return current_iter_elem
 
         raise StopIteration
 
