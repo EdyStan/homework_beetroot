@@ -12,12 +12,10 @@ full_url = base_url + f"?address={safe_url}&key={the_key}"
 
 r = requests.get(full_url)
 
+json_object = r.json()
 
-def recursive_search_for_location(dict_object):
-    for key, value in dict_object:
-        if key == 'location':
-            return value
-        elif type(value) == dict:
-            potential_final_location = recursive_search_for_location(value)
-            if potential_final_location is not None:
-                return potential_final_location
+
+print(json_object)
+print(full_url)
+
+print(json_object['results'][0]['geometry']['location'])
