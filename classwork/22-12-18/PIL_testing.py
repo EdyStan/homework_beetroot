@@ -39,5 +39,5 @@ def repeat_cropp_func_with_threads(n):
 
 if __name__ == '__main__':
 
-    repeat_cropp_func(50)
-    repeat_cropp_func_with_threads(50)
+    repeat_cropp_func(1)
+    repeat_cropp_func_with_threads(1)
